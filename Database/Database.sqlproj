@@ -13,7 +13,7 @@
     </RootPath>
     <RootNamespace>Database</RootNamespace>
     <AssemblyName>Database</AssemblyName>
-    <ModelCollation>1033, CI</ModelCollation>
+    <ModelCollation>1033,CI</ModelCollation>
     <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
     <DeployToDatabase>True</DeployToDatabase>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
@@ -22,6 +22,8 @@
     <SqlServerVerification>False</SqlServerVerification>
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -56,5 +58,62 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="elite_db\" />
+    <Folder Include="elite_db\Tables\" />
+    <Folder Include="elite_db\Views\" />
+    <Folder Include="Security\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="elite_db\Tables\tballegiance.sql" />
+    <Build Include="elite_db\Tables\tbattribute.sql" />
+    <Build Include="elite_db\Tables\tbcargoaction.sql" />
+    <Build Include="elite_db\Tables\tbcategory.sql" />
+    <Build Include="elite_db\Tables\tbcategorylocalization.sql" />
+    <Build Include="elite_db\Tables\tbcommodity.sql" />
+    <Build Include="elite_db\Tables\tbcommodity_has_attribute.sql" />
+    <Build Include="elite_db\Tables\tbcommoditybase.sql" />
+    <Build Include="elite_db\Tables\tbcommodityclassification.sql" />
+    <Build Include="elite_db\Tables\tbcommoditydata.sql" />
+    <Build Include="elite_db\Tables\tbcommoditylocalization.sql" />
+    <Build Include="elite_db\Tables\tbdnmap_commodity.sql" />
+    <Build Include="elite_db\Tables\tbeconomy.sql" />
+    <Build Include="elite_db\Tables\tbeconomylevel.sql" />
+    <Build Include="elite_db\Tables\tbeddnrelays.sql" />
+    <Build Include="elite_db\Tables\tbeventtype.sql" />
+    <Build Include="elite_db\Tables\tbgovernment.sql" />
+    <Build Include="elite_db\Tables\tbinitvalue.sql" />
+    <Build Include="elite_db\Tables\tblanguage.sql" />
+    <Build Include="elite_db\Tables\tblevellocalization.sql" />
+    <Build Include="elite_db\Tables\tblog.sql" />
+    <Build Include="elite_db\Tables\tboutfittingbase.sql" />
+    <Build Include="elite_db\Tables\tbpower.sql" />
+    <Build Include="elite_db\Tables\tbpowerstate.sql" />
+    <Build Include="elite_db\Tables\tbpricehistory.sql" />
+    <Build Include="elite_db\Tables\tbsecurity.sql" />
+    <Build Include="elite_db\Tables\tbshipyardbase.sql" />
+    <Build Include="elite_db\Tables\tbsource.sql" />
+    <Build Include="elite_db\Tables\tbstate.sql" />
+    <Build Include="elite_db\Tables\tbstationeconomy.sql" />
+    <Build Include="elite_db\Tables\tbstations.sql" />
+    <Build Include="elite_db\Tables\tbstations_org.sql" />
+    <Build Include="elite_db\Tables\tbstationtype.sql" />
+    <Build Include="elite_db\Tables\tbsystems.sql" />
+    <Build Include="elite_db\Tables\tbsystems_org.sql" />
+    <Build Include="elite_db\Tables\tbtrustedsenders.sql" />
+    <Build Include="elite_db\Tables\tbvisitedstations.sql" />
+    <Build Include="elite_db\Tables\tbvisitedsystems.sql" />
+    <Build Include="elite_db\Tables\tbvisittype.sql" />
+    <Build Include="elite_db\Tables\tmbestprofits.sql" />
+    <Build Include="elite_db\Tables\tmfilteredstations.sql" />
+    <Build Include="elite_db\Tables\tmneighbourstations.sql" />
+    <Build Include="elite_db\Tables\tmpa_allcommodities.sql" />
+    <Build Include="elite_db\Tables\tmpa_bycommodity.sql" />
+    <Build Include="elite_db\Tables\tmpa_bystation.sql" />
+    <Build Include="elite_db\Tables\tmpa_s2s_besttrips.sql" />
+    <Build Include="elite_db\Tables\tmpa_s2s_stationdata.sql" />
+    <Build Include="elite_db\Views\vilog.sql" />
+    <Build Include="elite_db\Views\visystemsandstations.sql" />
+    <Build Include="Security\elite_db.sql" />
+    <Build Include="Security\m2ss.sql" />
   </ItemGroup>
 </Project>
