@@ -26,11 +26,12 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-U8L3JKF</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAnRXhwU03eUmNDHxv3rV2GAAAAAACAAAAAAAQZgAAAAEAACAAAAAJ1qqy8FUq79F2RaiRz7ckTFOMMp2OUAOW2/B096C8uAAAAAAOgAAAAAIAACAAAABCA9OYxOqExK6Wb88YbqhjT7/Xk36G271MEqDoTwU/HZAAAAD+gX2OZdGHdpkIMlI/kZ79Z+18xp0g7VR8HIRSuQWMq4eWblJgnPuwyoLfpKb25EYmaXJRf1hrxNbWn5DmMX7FzW8a/z7rZZ/1kqoZkA+OU8wnMTf71zgRoGDQiCeeiQZeqt58jD6j+mLk35yCeJIbD1UH2h5XJgCXIdRpRjlL/upkaj/JBvbLU3J5JESxAihAAAAAAgLu8SVMExnbp5s1pMcCLkgDc6xH8wY3VKGYgOoUU/lbZKK+SDOWgYVwlW3o9Lv6/Kb8omkd9t35eJQ7y4tCBw==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAnRXhwU03eUmNDHxv3rV2GAAAAAACAAAAAAAQZgAAAAEAACAAAAClggXKQ1YTfpqF2bwSJJEAihjbs7LH4F7REobiwDaM3AAAAAAOgAAAAAIAACAAAAC22uxRTVYJUguG8oNx8Z8QviB0Hw/mzBuzyMnI0l8FHZAAAACNdBjvGvZLY/S2b9xbKPHXoDbK/Agh1IYX5a+WC9/Bp2Ec+8wU7tD4TGb7hrOayAesDryeri7GJBTYiyP68ywdckT2WzamZVW8Y+xaqV5/u4j+ExiNNW7shlKTxoWW+Xs8RYW5aCA04VRv1TW+95PAEKMX50+qZxd6iX/h+Yyef9J9yOQ206HucqChbWKv/QtAAAAA/XEdvE0jjCgiJva0+3z2blzuLyJikN4Ml9uorTYUZ6Nb49hwZRgCCyR39acRxM/mDbCd92qkRa+dzPDoPn8iAQ==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
           <SSIS:Package SSIS:Name="Import MySQL.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Import EDDB.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers />
         <SSIS:DeploymentInfo>
@@ -259,6 +260,38 @@
                 </SSIS:Parameter>
               </SSIS:Parameters>
             </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Import EDDB.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{226819BF-EA1B-4458-9AF0-130B16E5CD2F}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Package1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{2A0BD077-A3F8-481D-B9FA-4EB6C9E2DF4B}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters>
+                <SSIS:Parameter SSIS:Name="TempDir">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">{F82AE1B5-41BF-4672-9569-465936D7FA0C}</SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">D:\SSISTEMP</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+              </SSIS:Parameters>
+            </SSIS:PackageMetaData>
           </SSIS:PackageInfo>
         </SSIS:DeploymentInfo>
       </SSIS:Project>
@@ -276,7 +309,13 @@
         <ConnectionSecurityMappings />
         <DatabaseStorageLocations />
         <TargetServerVersion>SQLServer2017</TargetServerVersion>
-        <ParameterConfigurationValues />
+        <ParameterConfigurationValues>
+          <ConfigurationSetting>
+            <Id>LastModifiedTime</Id>
+            <Name>LastModifiedTime</Name>
+            <Value xsi:type="xsd:dateTime">2019-08-29T17:50:04.576333Z</Value>
+          </ConfigurationSetting>
+        </ParameterConfigurationValues>
       </Options>
     </Configuration>
   </Configurations>
